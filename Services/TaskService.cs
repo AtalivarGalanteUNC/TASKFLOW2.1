@@ -15,6 +15,13 @@ namespace TaskFlow.Services
 
         public void CrearTarea(string title, string description, string responsible)
         {
+
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                Console.WriteLine("El título no puede estar vacío.");
+                return;
+            }
+
             var tarea = new TaskItem
             {
                 Id = nextId++,
