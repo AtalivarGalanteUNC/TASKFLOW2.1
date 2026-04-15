@@ -32,5 +32,10 @@ namespace TaskFlow.Services
         {
             return tasks;
         }
+
+        public List<TaskItem> ListarTareasPorEstado(TaskFlow.Models.TaskStatus estado)
+        {
+            return tasks.Where(t => t.Status == estado).ToList();
+        }
     }
 }
