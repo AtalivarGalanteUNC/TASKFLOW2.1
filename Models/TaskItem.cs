@@ -17,7 +17,18 @@ namespace TaskFlow.Models
     {
         public int Id { get; set; }
 
-        public string Title { get; set; }
+        private string title;
+        public string Title
+        {
+            get => title;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("El título no puede estar vacío");
+
+                title = value;
+            }
+        }
 
         public string Description { get; set; }
 
@@ -28,5 +39,7 @@ namespace TaskFlow.Models
         public DateTime CreatedAt { get; set; }
 
         public DateTime? UpdatedAt { get; set; }
+
+        
     }
 }
