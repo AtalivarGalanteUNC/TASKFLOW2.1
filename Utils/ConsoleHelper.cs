@@ -29,6 +29,8 @@ namespace TaskFlow.Utils
                 return;
             }
 
+            Console.WriteLine("=== LISTADO DE TAREAS ===\n");
+
             foreach (var t in tareas)
             {
                 Console.WriteLine($"ID: {t.Id}");
