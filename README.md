@@ -17,3 +17,6 @@ Abrir en Visual Studio y ejecutar el proyecto.
 
 ## Integrantes
 - Galante , Maximo Atalivar ...
+
+##prueba pr
+- esto lo modifique para probar el pull request
